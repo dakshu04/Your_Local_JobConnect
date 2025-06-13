@@ -1,6 +1,6 @@
 import axios from "./axios";
 import { User } from "../types";
-
+const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
 export const fetchUsers = async (): Promise<User[]> => {
   const res = await axios.get("/users");
   return res.data;
