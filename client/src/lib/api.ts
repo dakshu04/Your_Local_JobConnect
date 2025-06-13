@@ -1,6 +1,7 @@
 import axios from "./axios";
 import { User } from "../types";
-const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
+// Replace localhost with your Render backend URL
+const BASE_URL = "https://your-local-jobconnect.onrender.com";
 export const fetchUsers = async (): Promise<User[]> => {
   const res = await axios.get("/users");
   return res.data;
